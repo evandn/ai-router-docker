@@ -4,7 +4,7 @@ FROM tailscale/tailscale:v1.92.4
 WORKDIR /app
 
 COPY --from=src /CLIProxyAPI/CLIProxyAPI ./
-COPY --from=src /CLIProxyAPI/config.example.yaml /data/config.yaml
+COPY --from=src /CLIProxyAPI/config.example.yaml ./config.yaml
 
 COPY run.sh ./
 
