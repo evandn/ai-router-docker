@@ -26,3 +26,10 @@ jobs:
         with:
           push: true
           tags: ghcr.io/${{ github.repository }}:latest
+
+      - uses: actions/delete-package-versions@v5
+        with:
+          package-name: ${{ github.event.repository.name }}
+          package-type: container
+          min-versions-to-keep: 0
+          delete-only-untagged-versions: true
