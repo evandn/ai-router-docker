@@ -1,4 +1,4 @@
-FROM eceasy/cli-proxy-api:v6.8.13 AS src
+FROM eceasy/cli-proxy-api:v6.8.15 AS src
 FROM tailscale/tailscale:v1.94.1
 
 WORKDIR /app
